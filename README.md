@@ -1,0 +1,2 @@
+I thought it would be fun to learn a bit of web development and start creating a website. A personal/resume website seemed like the best approach for a first site. I'll be using this to host projects as I go, as well as link to a DSP blog when I start working on that. 
+Currently it only has some HTML and CSS, hoping to figure out how some things work soon, then implement JS into it.
