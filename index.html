@@ -5,6 +5,15 @@
 		<title>Jeffrey Rodriguez</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="CSS/styles.css">
+		<script>
+			function reveal(id){
+				let element = document.getElementById(id);
+				if (element.style.display)
+					element.style.display = ((element.style.display != 'none') ? 'none' : 'block');
+				else
+					element.style.display = 'block'
+			}
+		</script>
 	</head>
 
 	<body>
@@ -16,8 +25,8 @@
 		</h2>
 
 		<div menu id="menu">
-			<button type="button">About</button>
-			
+			<button class="menu-button" onmouseover="style.backgroundColor='red'" onmouseout="style.backgroundColor='white'" onclick="reveal('about')">About</button>
+				<div class="menu-item" id="about">Profile text goes here</div>
 		</div>
 
 	</body>

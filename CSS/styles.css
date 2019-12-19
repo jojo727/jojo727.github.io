@@ -25,29 +25,16 @@ h2 {
 	color: orangered;
 	text-align: center;
 }
-.menu-item {
-	color:white;
-	border: 2px solid green;
-	border-radius: 10px;
-	border-right-width: 1000px;
+.menu-button {
+	border: none;
 	margin-left: 80px;
-}
-p {
-	color: white;
-	border: 1px solid magenta;
-	padding: 30px;
-}
-#p01 {
-	color: orange;
-	}
-	
-a:link {
-	color: black;
-	background-color: transparent;
-	text-decoration: none;
-}
+	padding: 15px 32px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
 
-
-a:hover {
-	background-color: purple;
+}
+.menu-item {
+	display: none;
 }
