@@ -2,7 +2,7 @@ html, body {
 	height: 100%;
 }
 body {
-	background-image: linear-gradient(blue, teal);
+	background-image: linear-gradient(45deg,yellow, blue);
 	background-repeat: no-repeat;
 	margin: 0
 	}
@@ -21,23 +21,42 @@ body {
 
 h1 {
 	font-size: 200%;
-	font-family: verdana;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	text-align: center;
+	color:midnightblue;
 }
 h2 {
-	color: orangered;
+	color: darkslategrey;
 	text-align: center;
 }
+
+#bttn-about {
+	width: 34%;
+	border-start-start-radius: 100%;
+	border-right-style: solid;
+	border-color: seagreen;
+}
+#bttn-cont {
+	border-start-end-radius: 100%;
+	border-left-style: solid;
+	border-color: seagreen;
+}
 .menu-button {
+	background-color: green;
+	float: inline-start;
 	border: none;
-	margin-left: 80px;
-	padding: 15px 32px;
+	color: white;
+	padding: 25px;
 	text-align: center;
-	display: inline-block;
-	font-size: 16px;
+	width: 33%;
+	
+	font-size: 32px;
 	cursor: pointer;
-	width: 500px;
 	vertical-align: top;
+}
+
+.clear {
+	clear: both;
 }
 
 .menu-item {

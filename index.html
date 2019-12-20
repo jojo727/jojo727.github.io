@@ -8,10 +8,21 @@
 		<script>
 			function reveal(id){
 				let element = document.getElementById(id);
+				//if element exists, set to none or block depending on the current status
+				//otherwise, set to block - needed as this requires two clicks without
 				if (element.style.display)
 					element.style.display = ((element.style.display != 'none') ? 'none' : 'block');
 				else
 					element.style.display = 'block'
+				//loop to hide all but the specified field
+				let divs = ['about','portfolio','contact'];
+				for (var i = 0; i < divs.length; i++){
+					//pointer variable associated with the ith element
+					//set all but the specified to none
+					var ptr = document.getElementById(divs[i])
+					if (element != ptr)
+						ptr.style.display = 'none';
+				}
 			}
 		</script>
 	</head>
@@ -24,36 +35,25 @@
 		<h2><i>Delivery Management Analyst at Conduent</i>
 		</h2>
 
-		<div menu id="menu">
-			<button class="menu-button" onmouseover="style.backgroundColor='red'" onmouseout="style.backgroundColor='white'" onclick="reveal('about')">About</button>
-			<button class="menu-button" onmouseover="style.backgroundColor='red'" onmouseout="style.backgroundColor='white'" onclick="reveal('portfolio')">Portfolio</button>
-			<button class="menu-button" onmouseover="style.backgroundColor='red'" onmouseout="style.backgroundColor='white'" onclick="reveal('contact')">Contact me</button>
+
+		<div class="btn-group" id="menu">
+			<button class="menu-button" id = "bttn-about" onmouseover="style.backgroundColor='red'" onmouseout="style.backgroundColor='green'" onclick="reveal('about')">About</button>
+			<button class="menu-button" id = "bttn-port" onmouseover="style.backgroundColor='red'" onmouseout="style.backgroundColor='green'" onclick="reveal('portfolio')">Portfolio</button>
+			<button class="menu-button" id = "bttn-cont" onmouseover="style.backgroundColor='red'" onmouseout="style.backgroundColor='green'" onclick="reveal('contact')">Contact me</button>
 			
 			<div class="menu-items">
-				<div class="menu-item" id="about">Profile text goes here</div>
-				<div class="menu-item" id="portfolio">Links here</div>
+				<div class="menu-item" id="about">
+					<p>
+						Hello, I'm Jeffrey.
+					</p>
+				</div>
+				<div class="menu-item" id="portfolio"><i>Coming 2020...</i></div>
 				<div class="menu-item" id="contact">other links here</div>
 			</div>
-
+			<div class="clear">
+			</div>
 			
 		</div>
 
 	</body>
 </html>
-<!--<section>
-	<h2 class="menu-item about">About</h2>
-</section>
-
-<section>
-	<h2 class="menu-item portfolio">Portfolio</h2>
-</section>
-
-<section>
-	<h2 class="menu-item contact">Contact</h2>
-</section>-->
-
-<!--div menu id="menu">
-	<div menu-item class="menu-item" id="about">About</div>
-	<div menu-item class="menu-item" id="portfolio">Portfolio</div>
-	<div menu-item class="menu-item" id="contact">Contact</div>
-<--div>-->
