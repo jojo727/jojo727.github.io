@@ -10,8 +10,9 @@
 				let element = document.getElementById(id);
 				//if element exists, set to none or block depending on the current status
 				//otherwise, set to block - needed as this requires two clicks without
-				if (element.style.display)
+				if (element.style.display){
 					element.style.display = ((element.style.display != 'none') ? 'none' : 'block');
+				}
 				else
 					element.style.display = 'block'
 				//loop to hide all but the specified field
@@ -37,9 +38,15 @@
 
 
 		<div class="btn-group" id="menu">
-			<button class="menu-button" id = "bttn-about" onmouseover="style.backgroundColor='red'" onmouseout="style.backgroundColor='green'" onclick="reveal('about')">About</button>
-			<button class="menu-button" id = "bttn-port" onmouseover="style.backgroundColor='red'" onmouseout="style.backgroundColor='green'" onclick="reveal('portfolio')">Portfolio</button>
-			<button class="menu-button" id = "bttn-cont" onmouseover="style.backgroundColor='red'" onmouseout="style.backgroundColor='green'" onclick="reveal('contact')">Contact me</button>
+			<button class="menu-button" id = "bttn-about" onmouseover="style.backgroundColor='rgb(4, 160, 160)'" onmouseout="style.backgroundColor='rgb(5, 180, 180)'" onclick="reveal('about')">
+				About
+			</button>
+			<button class="menu-button" id = "bttn-port" onmouseover="style.backgroundColor='rgb(4, 160, 160)'" onmouseout="style.backgroundColor='rgb(5, 180, 180)'" onclick="reveal('portfolio')">
+				Portfolio
+			</button>
+			<button class="menu-button" id = "bttn-cont" onmouseover="style.backgroundColor='rgb(4, 160, 160)'" onmouseout="style.backgroundColor='rgb(5, 180, 180)'" onclick="reveal('contact')">
+				Contact me
+			</button>
 			
 			<div class="menu-items">
 				<div class="menu-item" id="about">
