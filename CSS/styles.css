@@ -35,7 +35,6 @@ h2 {
 }
 #bttn-cont {
 	border-start-end-radius: 100%;
-	border-left-color: rgb(189, 189, 202);
 }
 .menu-button {
 	background-color: rgb(5, 180, 180);/*0,128,128*/
@@ -51,19 +50,36 @@ h2 {
 	vertical-align: top;
 }
 
+.menu-button:hover{
+	background-color: rgb(4, 160, 160);
+	outline: none;
+}
+
 .menu-button:focus{
 	background: rgb(4, 160, 160);
 	background-color: rgb(4, 160, 160);
 	outline: none;
 	-moz-user-select: toggle;
-  	-webkit-box-shadow: inset 0px 0px 5px rgb(4, 19, 46);
-    	-moz-box-shadow: inset 0px 0px 5px rgb(4, 19, 46);
-        	box-shadow: inset 0px 0px 5px rgb(4, 19, 46);
+	box-shadow: inset 0px 0px 5px rgb(4, 19, 46);  
+	-webkit-box-shadow: inset 0px 0px 5px rgb(4, 19, 46);
+    -moz-box-shadow: inset 0px 0px 5px rgb(4, 19, 46);
+    
 }
 
 .clear {
 	clear: both;
 }
+div.menu-items{
+	background-color: rgb(4, 160, 160);
+	display: inline-block;
+	font-size: 20px;
+	padding-inline: 10%;
+	padding-top: 10%;
+}
+
 .menu-item {
 	display: none;
+}
+#about{
+	display: inline-block;
 }
