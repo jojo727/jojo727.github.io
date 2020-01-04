@@ -6,17 +6,17 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="CSS/styles.css">
 		<script>
-			function reveal(id){
+			function reveal(id){ //about, exp, portfolio, contact
 				let element = document.getElementById(id);
 				//if element exists, set to none or block depending on the current status
 				//otherwise, set to block - needed as this requires two clicks without
 				if (element.style.display){
-					element.style.display = ((element.style.display != 'none') ? 'none' : 'block');
+					element.style.display = ((element.style.display != 'none') ? 'none' : 'inline-block');
 				}
 				else
-					element.style.display = 'block'
+					element.style.display = 'inline-block'
 				//loop to hide all but the specified field
-				let divs = ['about','portfolio','contact'];
+				let divs = ['about','experience','contact'];
 				for (var i = 0; i < divs.length; i++){
 					//pointer variable associated with the ith element
 					//set all but the specified to none
@@ -29,17 +29,15 @@
 	</head>
 
 	<body>
+		<h1>Jeffrey Rodriguez</h1>
 		<div id="profile">
 			<img src = "profpic.jpg" alt = "Real pic of me">
 		</div>
-		<h1>Jeffrey Rodriguez</h1>
-		<h2><i>Delivery Management Analyst at Conduent</i>
-		</h2>
 
 
 		<div class="btn-group" id="menu">
 			<button class="menu-button" id = "bttn-about" onclick="reveal('about')">
-				About
+				About Me
 			</button>
 			<button class="menu-button" id = "bttn-port" onclick="reveal('experience')">
 				Experience
@@ -50,7 +48,7 @@
 			<div class="menu-items" id="items">
 				<section class="menu-item" id="about">
 					<p>
-						Hello, I'm Jeffrey. I work as a Delivery Management Analyst for Conduent, located in Melville, NY.
+						Hello, I'm Jeffrey and I currently work as a Delivery Management Analyst, helping to investigate software defects reported by our clients and provide a resolution for them.
 						I graduated with a BSc in Applied Mathematics & Statistics from Stony Brook University in May, 2018.
 						I am interested in working in an analytic position, either as a Business Analyst, Data Analyst, or continuing to work as an Product Support Analyst.
 
