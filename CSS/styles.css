@@ -10,7 +10,6 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
-	top: 10px;
 	left: 5px;
 	right:5px;
 	display: block;
@@ -86,9 +85,23 @@ div.menu-items{
 }
 #about{
 	display: inline-block;
-	padding-inline: 5%;
+	padding-inline: 2.5%;
+	font-size: 25px;
 
 }
 #experience{
 	font-size: 20px;
+}
+
+#contact{
+	text-align: center;
+}
+.contact-item{
+	float: right;
+	text-align: center;
+	margin:0 4px;
+}
+.contact-list{
+	list-style-type: none;
+	margin: auto;
 }
