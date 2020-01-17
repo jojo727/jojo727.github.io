@@ -4,17 +4,18 @@
 	<head>
 		<title>Jeffrey Rodriguez</title>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="CSS/styles.css">
+		<link rel="stylesheet" href="CSS/styl.css">
 		<script>
 			function reveal(id){ //about, exp, portfolio, contact
 				let element = document.getElementById(id);
 				//if element exists, set to none or block depending on the current status
 				//otherwise, set to block - needed as this requires two clicks without
 				if (element.style.display){
-					element.style.display = ((element.style.display != 'none') ? 'none' : 'inline-block');
+					if (element.style.display == 'none') 
+							element.style.display = 'flex';
 				}
 				else
-					element.style.display = 'inline-block'
+					element.style.display = 'flex'
 				//loop to hide all but the specified field
 				let divs = ['about','experience','contact'];
 				for (var i = 0; i < divs.length; i++){
@@ -29,7 +30,7 @@
 	</head>
 
 	<body>
-		<h1>Jeffrey Rodriguez</h1>
+		<h1>Jeffrey J. Rodriguez</h1>
 		<div id="profile">
 			<img src = "profpic.jpg" alt = "Real pic of me">
 		</div>
@@ -45,58 +46,97 @@
 			<button class="menu-button" id = "bttn-cont" onclick="reveal('contact')">
 				Contact me
 			</button>
-			<div class="menu-items" id="items">
-				<section class="menu-item" id="about">
-					<p>
-						Hello, I'm Jeffrey and I currently work as a Delivery Management Analyst, helping to investigate software defects reported by our clients (healthcare insurance companies) and provide a resolution for them.
-						I graduated with a BSc in Applied Mathematics & Statistics from Stony Brook University in May, 2018.
-						I am interested in working in an analytic position, either as a Business Analyst, Data Analyst, or continuing to work as an Product Support Analyst.
+		</div>
 
-					</p>
-					<p>
-						When I'm not working, you may find me listening to music, playing with one of my guitars, in a yoga class, or writing programs to fulfill my random needs.
-					</p>	
+		<div class="menu-items" id="items">
+			<section class="menu-item" id="about">
+				<p>
+					Hello, I'm Jeffrey and I currently work reside in Copiague, NY. I have experience in client-facing product support and quality assurance testing for software used by healthcare insurance companies. 
+
+				</p>
+				<p>
+					When I'm not working, you may find me listening to music, playing with one of my guitars, in a yoga class, or coding to fulfill my random needs (like this site).
+				</p>
 					
-				</section>
-				<section class="menu-item" id="experience">
-					<u><h4>Conduent (formerly Health Solutions Plus) <i class="dates"><u>June 2018-present</u></i></h4></u>
-					<p>
-						At Conduent (<i>formerly Health Solutions Plus</i>), I was initialy hired as a Quality Assurance Analyst.
-						Most of my testing was manual, but there was some API testing performed through Postman as well.
-					</p>
-					<p>
-						After a few months, I joined the Client Services department where I still work as a Delivery Management Analyst.
-						Our clients are healthcare insurance companies. When they believe a defect has been found, they submit a service ticket. I work with severfal of these clients and have built a rapport with them by providing swift and clear communication on investigation progress.
-						If the reported isssue is found to not be a defect, I explain this and provide training to the client if necessary.
-						If the issue is a defect, I attempt to find the root cause of the issue, and whether or not it is related to recent changes or a version upgrade.
-						This information is then relayed to our development team to fix the bugs for upcoming release, and when possible, write a script in SQL to resolve the issue.
-					</p>
-					<p>
-						When we cannot write a script for the client, and it is an issue preventing the client from operating as expected, I do my best to attempt to come up with a workaround for the client.
-						This helps to prevent the client from encountering this issue again, and also provides a fast and easy solution if another client reports the same issue.
-						Communication is mainly handled through email, but occasionally I will get on a call via Microsoft Teams to gather information from the client, troubleshoot issues we cannot reproduce in local environments, or allow development to deploy changes into the client's environment remotely.
-					</p>
-					<p>
-						Although this role is different from what I was initially hired into, I've come to enjoy the challenges of understanding what the client is reported and how the issue occurs. 
-						I enjoy learning more about the healthcare insurance industry processes every day, as well as how each company has their own unique approach to things.
-						I've also become very comfortable with querying databse tables via SQL Server to investigate these issues.
-					</p>
-				</section>
-				<div class="menu-item" id="contact">
-					<ul class="contact-list">
-						<li class="contact-item"><a href="https://github.com/jojo727">
-							<img src = "github.png" alt = "GitHub" align="right">
-						</a></li>
-						<li class="contact-item"><a href="https://www.linkedin.com/in/jrodriguez27/">
-							<img src = "linkedin.png" alt="LinkedIn" align="right">
-						</a></li>
-					</ul>
+			</section>
+			<section class="menu-item hidden" id="experience">
+				<h3><u>Conduent</u> <em>(formerly Health Solutions Plus)</em> <i class="dates">June 2018-present</i></h3>
+				<p>
+					I've been working here since I graduated from Stony Brook University, with most of my time spent as a Delivery Management Analyst.
+					Initially, I was hired by <a href="https://www.hspweb.com/" target="_blank">Health Solutions Plus</a>, a company that provides a suite of software applications for healthcare insurance companies to store data on members and groups, and automate the submission and payment of claims and bills. 
+					My first role was as a Quality Assurance Analyst intern, and I was offered a fulltime position following this internship. 
+					A couple months later, I was invited to join the Client Services department as Junior Product Specialist.
+					...And then we were acquired, where my department and job roles stayed the same, but my title was changed to Delivery Management Analyst.
+				</p>
+				<ul><li><h4>Delivery Management Analyst<i class="dates">October 2018-present</i></h4></li>
+				<p>
+					Since moving to this department in October 2018, I've built a rapport with about a dozen of these companies, reviewing their reported defects.
+					Sometimes, these issues are the result of bad data that needs to be cleaned up via a script, sometimes they've found a new bug and a bug fix is created,
+					and sometimes, there is a misunderstanding and I provide training to the client. 
+					After investigating over 100 of these, I've learned a lot about the Heatlhcare Insurance Payer Domain and how to communicate both with clients and our developers.
+				
+				I've also learned how to prioritize tickets, some days have a larger influx of tickets than others, which requires understanding the business needs of each ticket
+				- a dropdown box populating when its parent hasn't had a value assigned is negligible;
+				bills being due in a couple of weeks when not all records are being created is not!</p>
+				<p>My investigations are done in several ways - analyzing XML error logs, 
+					querying client databases with Microsoft SQL Server, 
+					logging onto our company's software remotely and reviewing in the client's environment, 
+					and attempting to reproduce with local data. 
+					This last method is especially valuable as it is easier to reproduce in bug fixes for both Development and QA, although it is not always doable.
+				</p>
+				Communications are done through email or phone via Microsoft Teams, with positive reception from clients for my clear and fast communications, as well as instructions provided during training write-ups.
+				We've also gained some new employees this year, and I've had the pleasure of providing some training to them.
+				It's been a fun experience, both to help them, and realize that I understand some things better than I had initially thought.
+				Additionally, I also will occasionally perform software testing, with emphasis on files going into custom code lines for clients. 
+				These files tend to be financials related, and I also had experience testing new Medicare Advantage functionality, 
+				with my testing notes and batch files being used by the Implementation Team to train one of our onboarding clients.
+			</p>
+			</ul>
+
+		<ul><li><h4>Quality Assurance Analyst<i class="dates">July 2018-September 2018</i></h4>
+
+		</li>
+			<p>
+				Initially I was hired as a summer intern, but my clear testing notes and curiousity to about SQL and different types of testing convinced the QA manager to offer me a fulltime job.
+				Although I was not in this department for very long, I had a good experience here, &#8211 learning about different testing methodologies and ways of documenting notes (simple Word writeups, test matrices).
+				It was also valuable to communicate with Development in order to determine the root cause of issues, which was a very good experience to have once I was moved to Customer Service, where it happens quite often.
+				My testing was mostly manual, along with some API testing via Postman (XML and JSON used for requests).
+			</p>
+		</ul>
+		
+	<h4 class="skill-list">Skills gained:</h4>
+		<ul class="skill-list">
+			<li>T-SQL</li>
+			<li>Healthcare Payer Domain Knowledge</li>
+			<li>Manual and API testing</li>
+			<li>Error log analysis.</li>
+			<li>EDI file troubleshooting</li>
+		</ul>
+
+
+			</section>
+			<div class="menu-item hidden" id="contact">
+				<div class="contact-item" id="github">
+					
+					
+					<figure>
+						<a href="https://github.com/jojo727">
+							<img src = "github.png" alt = "GitHub">
+						</a>
+						<figcaption><em>(Projects coming soon)</em></figcaption>
+					</figure>
+				
+				</div>
+				<div class="contact-item" id="linkedin">
+					<a href="https://www.linkedin.com/in/jrodriguez27/">
+						<img src = "linkedin.png" alt="LinkedIn">
+					</a>
 				</div>
 			</div>
+		</div>
 			
 			<div class="clear"></div>
 		
-		</div>
 
 	</body>
 </html>
